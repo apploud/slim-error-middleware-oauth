@@ -1,0 +1,48 @@
+stages:
+    - build
+    - test
+
+image: php:7.3-alpine
+
+composer:
+    stage: build
+    image: composer:latest
+    script:
+        - composer install --no-interaction --ansi --prefer-dist --optimize-autoloader --ignore-platform-reqs
+    artifacts:
+        paths:
+            - vendor/
+        expire_in: 24h
+
+lint:
+    stage: test
+    script:
+        - vendor/bin/phing lint
+
+phpstan:
+    stage: test
+    script:
+        - vendor/bin/phing stan
+
+sniffer:
+    stage: test
+    script:
+        - vendor/bin/phing sniffer
+
+requirements:
+    stage: test
+    image: composer:latest
+    before_script:
+        - composer global require maglnet/composer-require-checker
+    script:
+        - vendor/bin/phing reqs
+
+tests:
+    stage: test
+    script:
+        - vendor/bin/phing tests
+    artifacts:
+        paths:
+            - log/
+        expire_in: 48h
+        when: on_failure
