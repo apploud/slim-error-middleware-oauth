@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Apploud\PackageNamespace\Test;
+namespace Apploud\OAuthErrorMiddleware\Test;
 
 use PHPUnit\Framework\TestCase;
 

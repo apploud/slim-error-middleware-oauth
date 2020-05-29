@@ -1,20 +1,24 @@
 {
-	"name": "",
-	"description": "",
+	"name": "apploud/slim-error-middleware-oauth",
+	"description": "league/oauth2-server integration for apploud/slim-error-middleware",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Your name",
-			"email": "your@email.cc",
+			"name": "Jan Konáš",
+			"email": "jan.konas@apploud.cz",
 			"role": "Developer"
 		}
 	],
 	"require": {
-		"php": ">=7.3"
+		"php": ">=7.3",
+		"psr/http-factory": "^1.0",
+		"psr/http-message": "^1.0",
+		"apploud/slim-error-middleware": "^0.1",
+		"league/oauth2-server": "^8.1"
 	},
 	"autoload": {
 		"psr-4": {
-			"Apploud\\PackageNamespace\\": "src"
+			"Apploud\\OAuthErrorMiddleware\\": "src"
 		}
 	},
 	"require-dev": {
@@ -31,7 +35,7 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Apploud\\PackageNamespace\\Test\\": "tests"
+			"Apploud\\OAuthErrorMiddleware\\Test\\": "tests"
 		}
 	}
 }

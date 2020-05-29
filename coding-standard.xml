@@ -122,8 +122,8 @@
 	<rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
 		<properties>
 			<property name="rootNamespaces" type="array" value="
-				src => Apploud\PackageNamespace,
-				tests => Apploud\PackageNamespace\Test,
+				src => Apploud\OAuthErrorMiddleware,
+				tests => Apploud\OAuthErrorMiddleware\Test,
 			"/>
 		</properties>
 	</rule>
