@@ -14,8 +14,7 @@ use Throwable;
 
 class OAuthErrorResponseFactory implements ErrorResponseFactory
 {
-	/** @var ResponseFactoryInterface */
-	private $responseFactory;
+	private ResponseFactoryInterface $responseFactory;
 
 
 	public function __construct(ResponseFactoryInterface $responseFactory)
