@@ -13,7 +13,7 @@
 		"php": "^8.0",
 		"psr/http-factory": "^1.0",
 		"psr/http-message": "^1.0 || ^2.0",
-		"apploud/slim-error-middleware": "^0.3",
+		"apploud/slim-error-middleware": "^0.3 || ^0.4",
 		"league/oauth2-server": "^8.1 || ^9.0"
 	},
 	"autoload": {
