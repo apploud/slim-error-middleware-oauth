@@ -26,7 +26,7 @@ class OAuthErrorResponseFactory implements ErrorResponseFactory
 	/**
 	 * @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter
 	 */
-	public function createResponse(Throwable $error, ServerRequestInterface $request): ResponseInterface
+	public function createResponse(Throwable $error, ServerRequestInterface $request, ?string $logRecordId): ResponseInterface
 	{
 		if ($error instanceof OAuthServerException) {
 			return $error->generateHttpResponse($this->responseFactory->createResponse());
